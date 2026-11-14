@@ -5,11 +5,11 @@ html,body{margin:0;min-height:100%;background:var(--bg)}
 body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;color:#fff;-webkit-font-smoothing:antialiased}
 .bg{position:fixed;inset:0;overflow:hidden;pointer-events:none;background:radial-gradient(120% 60% at 0% 0%,rgba(88,40,180,.38),transparent 60%),var(--bg)}
 .bg i{position:absolute;display:block}
-.grid{inset:-60px;background-image:linear-gradient(rgba(139,92,246,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(139,92,246,.08) 1px,transparent 1px);background-size:40px 40px;will-change:transform;animation:gridmove calc(9s*var(--s)) linear infinite}
+.grid{inset:-60px;background-image:linear-gradient(rgba(139,92,246,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(139,92,246,.08) 1px,transparent 1px);background-size:40px 40px;will-change:transform;animation:gridmove calc(4s*var(--s)) linear infinite}
 .c{border-radius:50%;border:1.5px solid rgba(168,85,247,.6);background:radial-gradient(circle,rgba(109,61,240,.30),rgba(109,61,240,.06) 70%);will-change:transform}
-.c::after{content:"";position:absolute;inset:28px;border-radius:50%;border:1px solid rgba(168,85,247,.28)}
-.c1{width:300px;height:300px;top:-130px;left:-130px;animation:f1 calc(22s*var(--s)) ease-in-out infinite alternate}
-.c2{width:340px;height:340px;right:-160px;bottom:-150px;animation:f2 calc(26s*var(--s)) ease-in-out infinite alternate}
+.c::after{content:"";position:absolute;inset:28px;border-radius:50%;border:1px solid rgba(168,85,247,.4);animation:ring calc(5s*var(--s)) ease-in-out infinite alternate}
+.c1{width:300px;height:300px;top:-130px;left:-130px;animation:f1 calc(7s*var(--s)) ease-in-out infinite alternate}
+.c2{width:340px;height:340px;right:-160px;bottom:-150px;animation:f2 calc(8s*var(--s)) ease-in-out infinite alternate}
 .o{border-radius:50%;background:radial-gradient(circle,rgba(168,85,247,.30),transparent 65%)}
 .o1{width:280px;height:280px;top:28%;left:-120px;animation:breathe calc(8s*var(--s)) ease-in-out infinite}
 .o2{width:300px;height:300px;top:58%;right:-130px;animation:breathe calc(10s*var(--s)) ease-in-out infinite -4s}
@@ -50,8 +50,9 @@ h1+.tag{margin-top:-12px}
 .foot a{color:#fff;font-weight:700;text-decoration:none}
 @media (max-height:640px){.avatar{width:92px;height:92px;margin-bottom:12px}.avatar img{width:76px;height:76px}h1{font-size:23px;margin-bottom:16px}.card{padding:20px 20px 18px}.foot{margin-top:12px}}
 @keyframes gridmove{to{transform:translate3d(40px,40px,0)}}
-@keyframes f1{to{transform:translate3d(26px,20px,0) rotate(8deg)}}
-@keyframes f2{to{transform:translate3d(-24px,-20px,0) rotate(-8deg)}}
+@keyframes f1{to{transform:translate3d(60px,50px,0) scale(1.18)}}
+@keyframes ring{to{transform:translate3d(18px,14px,0) scale(.9)}}
+@keyframes f2{to{transform:translate3d(-60px,-50px,0) scale(1.18)}}
 @keyframes breathe{0%,100%{opacity:.55;transform:scale(.92)}50%{opacity:1;transform:scale(1.12)}}
 @keyframes rise{0%{opacity:0;transform:translate3d(0,0,0)}12%{opacity:.95}50%{opacity:.35}70%{opacity:.9}100%{opacity:0;transform:translate3d(14px,-105vh,0)}}
 @keyframes spin{to{transform:rotate(360deg)}}
