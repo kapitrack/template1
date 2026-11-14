@@ -1,0 +1,60 @@
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+:root{--s:1;--bg:#0b0814}
+@media (prefers-reduced-motion:reduce){:root{--s:1.6}}
+html,body{margin:0;min-height:100%;background:var(--bg)}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;color:#fff;-webkit-font-smoothing:antialiased}
+.bg{position:fixed;inset:0;overflow:hidden;pointer-events:none;background:radial-gradient(120% 60% at 0% 0%,rgba(88,40,180,.38),transparent 60%),var(--bg)}
+.bg i{position:absolute;display:block}
+.grid{inset:-60px;background-image:linear-gradient(rgba(139,92,246,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(139,92,246,.08) 1px,transparent 1px);background-size:40px 40px;will-change:transform;animation:gridmove calc(9s*var(--s)) linear infinite}
+.c{border-radius:50%;border:1.5px solid rgba(168,85,247,.6);background:radial-gradient(circle,rgba(109,61,240,.30),rgba(109,61,240,.06) 70%);will-change:transform}
+.c::after{content:"";position:absolute;inset:28px;border-radius:50%;border:1px solid rgba(168,85,247,.28)}
+.c1{width:300px;height:300px;top:-130px;left:-130px;animation:f1 calc(22s*var(--s)) ease-in-out infinite alternate}
+.c2{width:340px;height:340px;right:-160px;bottom:-150px;animation:f2 calc(26s*var(--s)) ease-in-out infinite alternate}
+.o{border-radius:50%;background:radial-gradient(circle,rgba(168,85,247,.30),transparent 65%)}
+.o1{width:280px;height:280px;top:28%;left:-120px;animation:breathe calc(8s*var(--s)) ease-in-out infinite}
+.o2{width:300px;height:300px;top:58%;right:-130px;animation:breathe calc(10s*var(--s)) ease-in-out infinite -4s}
+.p{width:3px;height:3px;bottom:-10px;border-radius:50%;background:#c9a9ff;box-shadow:0 0 6px #a855f7;opacity:0;animation:rise calc(var(--d)*var(--s)) linear infinite var(--w)}
+.p1{left:8%;--d:13s;--w:-1s}
+.p2{left:19%;--d:17s;--w:-9s;width:4px;height:4px}
+.p3{left:30%;--d:15s;--w:-5s}
+.p4{left:42%;--d:19s;--w:-12s}
+.p5{left:53%;--d:14s;--w:-3s;width:4px;height:4px}
+.p6{left:63%;--d:18s;--w:-8s}
+.p7{left:72%;--d:16s;--w:-14s}
+.p8{left:81%;--d:12s;--w:-6s;width:4px;height:4px}
+.p9{left:90%;--d:20s;--w:-10s}
+.p10{left:48%;--d:21s;--w:-16s}
+#root{position:relative;z-index:1;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:max(20px,env(safe-area-inset-top)) 16px max(20px,env(safe-area-inset-bottom))}
+.card{position:relative;width:100%;max-width:340px;padding:28px 22px 24px;border-radius:22px;background:rgba(18,12,34,.8);border:1px solid rgba(167,139,250,.18);box-shadow:0 22px 50px -22px rgba(0,0,0,.85),inset 0 1px 0 rgba(255,255,255,.06);display:flex;flex-direction:column;align-items:center;text-align:center}
+.card::before{content:"";position:absolute;inset:-1px;border-radius:inherit;border:1px solid rgba(168,85,247,.75);box-shadow:0 0 26px rgba(168,85,247,.35);opacity:0;pointer-events:none;animation:cardglow calc(4s*var(--s)) ease-in-out infinite}
+.avatar{position:relative;width:112px;height:112px;margin:0 0 18px;display:grid;place-items:center}
+.avatar::before{content:"";position:absolute;inset:-6px;border-radius:50%;background:radial-gradient(circle,rgba(168,85,247,.55),transparent 68%);animation:breathe calc(4s*var(--s)) ease-in-out infinite}
+.avatar::after{content:"";position:absolute;inset:0;border-radius:50%;border:1.5px dashed rgba(201,169,255,.75);animation:spin calc(18s*var(--s)) linear infinite}
+.avatar img{position:relative;z-index:1;width:94px;height:94px;border-radius:50%;object-fit:cover;display:block;border:3px solid #a855f7;box-shadow:0 0 20px rgba(168,85,247,.55);background:#0a0f26}
+h1{margin:0 0 22px;font-size:27px;line-height:1.1;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+.tag{margin:0 0 22px;width:100%;display:flex;align-items:center;justify-content:center;gap:9px;font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#b9a8e8}
+.tag::before,.tag::after{content:"";flex:0 0 22px;height:1px;background:linear-gradient(90deg,transparent,#8b5cf6)}
+.tag::after{transform:scaleX(-1)}
+h1+.tag{margin-top:-12px}
+.btn{position:relative;isolation:isolate;width:100%;height:52px;border:0;border-radius:999px;background:linear-gradient(90deg,#b66cff,#5b3fe8);color:#fff;font-family:inherit;font-size:17px;font-weight:600;line-height:1;display:inline-flex;align-items:center;justify-content:center;gap:10px;cursor:pointer;box-shadow:0 10px 26px -10px rgba(124,58,237,.8)}
+.btn svg{width:22px;height:22px;flex:none}
+.btn::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;box-shadow:0 0 30px 4px rgba(168,85,247,.85);opacity:.3;animation:pulse calc(2.4s*var(--s)) ease-in-out infinite}
+.btn::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:linear-gradient(100deg,transparent 42%,rgba(255,255,255,.38) 50%,transparent 58%) no-repeat;background-size:300% 100%;background-position:100% 0;animation:shine calc(3.5s*var(--s)) ease-in-out infinite}
+.btn:active{transform:scale(.98)}
+.btn:disabled{cursor:default;opacity:.75}
+.btn:disabled::before{animation:none;opacity:.2}
+.btn:disabled::after{animation:none;opacity:0}
+.btn:disabled svg{animation:spin 1.2s linear infinite}
+.foot{margin-top:18px;display:inline-flex;align-items:center;gap:7px;padding:6px 14px 6px 6px;border-radius:999px;background:rgba(255,255,255,.05);border:1px solid rgba(167,139,250,.22);font-size:12px;color:#a79cc7}
+.foot img{width:22px;height:22px;border-radius:50%;object-fit:cover;display:block}
+.foot a{color:#fff;font-weight:700;text-decoration:none}
+@media (max-height:640px){.avatar{width:92px;height:92px;margin-bottom:12px}.avatar img{width:76px;height:76px}h1{font-size:23px;margin-bottom:16px}.card{padding:20px 20px 18px}.foot{margin-top:12px}}
+@keyframes gridmove{to{transform:translate3d(40px,40px,0)}}
+@keyframes f1{to{transform:translate3d(26px,20px,0) rotate(8deg)}}
+@keyframes f2{to{transform:translate3d(-24px,-20px,0) rotate(-8deg)}}
+@keyframes breathe{0%,100%{opacity:.55;transform:scale(.92)}50%{opacity:1;transform:scale(1.12)}}
+@keyframes rise{0%{opacity:0;transform:translate3d(0,0,0)}12%{opacity:.95}50%{opacity:.35}70%{opacity:.9}100%{opacity:0;transform:translate3d(14px,-105vh,0)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes cardglow{0%,100%{opacity:0}50%{opacity:.7}}
+@keyframes pulse{0%,100%{opacity:.22}50%{opacity:.85}}
+@keyframes shine{0%{background-position:100% 0}45%,100%{background-position:0 0}}
