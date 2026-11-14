@@ -24,6 +24,26 @@ body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Aria
 .p8{left:81%;--d:12s;--w:-6s;width:4px;height:4px}
 .p9{left:90%;--d:20s;--w:-10s}
 .p10{left:48%;--d:21s;--w:-16s}
+.p11{left:4%;--d:14s;--w:-3s;width:4px;height:4px}
+.p12{left:14%;--d:18s;--w:-6s}
+.p13{left:24%;--d:16s;--w:-9s}
+.p14{left:35%;--d:20s;--w:-12s;width:4px;height:4px}
+.p15{left:46%;--d:13s;--w:-2s}
+.p16{left:57%;--d:17s;--w:-1s}
+.p17{left:68%;--d:15s;--w:-6s;width:4px;height:4px}
+.p18{left:77%;--d:19s;--w:-5s}
+.p19{left:86%;--d:12s;--w:-3s}
+.p20{left:95%;--d:21s;--w:-9s;width:4px;height:4px}
+.p21{left:11%;--d:16s;--w:-1s}
+.p22{left:27%;--d:14s;--w:-8s}
+.p23{left:39%;--d:18s;--w:-3s;width:4px;height:4px}
+.p24{left:51%;--d:13s;--w:-3s}
+.p25{left:61%;--d:20s;--w:-5s}
+.p26{left:73%;--d:15s;--w:-3s;width:4px;height:4px}
+.p27{left:83%;--d:17s;--w:-17s}
+.p28{left:92%;--d:12s;--w:-6s}
+.p29{left:17%;--d:19s;--w:-19s;width:4px;height:4px}
+.p30{left:66%;--d:22s;--w:-16s}
 #root{position:relative;z-index:1;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:max(20px,env(safe-area-inset-top)) 16px max(20px,env(safe-area-inset-bottom))}
 .card{position:relative;width:100%;max-width:340px;padding:28px 22px 24px;border-radius:22px;background:rgba(18,12,34,.8);border:1px solid rgba(167,139,250,.18);box-shadow:0 22px 50px -22px rgba(0,0,0,.85),inset 0 1px 0 rgba(255,255,255,.06);display:flex;flex-direction:column;align-items:center;text-align:center}
 .card::before{content:"";position:absolute;inset:-1px;border-radius:inherit;border:1px solid rgba(168,85,247,.75);box-shadow:0 0 26px rgba(168,85,247,.35);opacity:0;pointer-events:none;animation:cardglow calc(4s*var(--s)) ease-in-out infinite}
